@@ -30,12 +30,12 @@ brew install \
 # install useful applications
 brew cask install \
   docker \
-#   1password \
-#   dropbox \
-#   google-chrome \
-#   spotify \
-#   visual-studio-code \
-#   vlc \
+  # 1password \
+  # dropbox \
+  # google-chrome \
+  # spotify \
+  # visual-studio-code \
+  # vlc \
 
 # Remove outdated versions from the cellar
 brew cleanup
@@ -224,8 +224,8 @@ osascript -l JavaScript -e "Application('System Events').appearancePreferences.d
 echo -e "\n🧰 terminal setup"
 # ==========
 
-# use zsh as default shell, if it's not already
-[ "$SHELL" != "/bin/zsh" ] && chsh -s $(which zsh)
+# use zsh as default shell
+chsh -s $(which zsh)
 
 # Snazzy theme
 # https://github.com/sindresorhus/terminal-snazzy

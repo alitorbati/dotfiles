@@ -2,7 +2,7 @@
 
 ## execute as-is
 
-`cd; curl -#L https://github.com/alitorbati/dotfiles/tarball/main | tar -xzv --strip-components 1 --exclude={README.md}; source macos.sh; rm macos.sh`
+`cd; curl -#L https://github.com/alitorbati/dotfiles/tarball/main | tar -xzv --strip-components 1 --exclude='README.md'; source macos.sh; rm macos.sh`
 
 After the first time you can subsequently use the `dotfiles` alias to execute that line
 
