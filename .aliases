@@ -1,0 +1,69 @@
+#!/bin/zsh
+
+
+# ==========
+# do the whole thing
+# ==========
+
+alias dotfiles="curl -sL https://gist.githubusercontent.com/alitorbati/a8a903621ad1df6317e424a1a69f5d93/raw/macos.sh | zsh"
+
+
+# ==========
+# formatting
+# ==========
+
+# List -(all files)(separate lines)(colorized)(extra info)
+alias ls="ls -a1GF"
+
+# Always enable colored `grep` output
+# Note: `GREP_OPTIONS="--color=auto"` is deprecated, hence the aliases
+alias grep='grep --color=auto'
+alias fgrep='fgrep --color=auto'
+alias egrep='egrep --color=auto'
+
+
+# ==========
+# terminal conveniences
+# ==========
+
+# Enable aliases to be sudo’ed
+alias sudo='sudo '
+
+# Reload the shell (i.e. invoke as a login shell)
+alias reload="exec $SHELL -l"
+
+# Lock the screen (when going AFK)
+alias afk="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend"
+
+# show IP addresses
+alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
+alias localip="ipconfig getifaddr en0"
+
+# Show/hide hidden files in Finder
+alias show="defaults write com.apple.finder AppleShowAllFiles -bool true && killall Finder"
+alias hide="defaults write com.apple.finder AppleShowAllFiles -bool false && killall Finder"
+
+# open this file in an editor
+alias aliases="code ~/.aliases"
+
+# stop typing `git` so much
+# alias g="git"
+
+
+# ==========
+# SigSci
+# ==========
+
+alias sigsci="cd ${GOPATH}/src/github.com/signalsciences/sigsci/"
+alias v1="cd ${GOPATH}/src/github.com/signalsciences/sigsci/dashboard/ui/v1/"
+alias cacheblaster="rm -rf node_modules/.cache/"
+alias dtg="git diff -U5|gist -p -c -f changes.diff -s -o"
+
+alias ecr_auth='aws --profile sigsci_prod --region us-west-2 ecr get-login-password | docker login --password-stdin --username AWS https://\`aws --profile sigsci_prod sts get-caller-identity|jq -r .Account\`.dkr.ecr.us-west-2.amazonaws.com'
+alias okta-time='OKTA_AWS_ROLE_TO_ASSUME="arn:aws:iam::803688608479:role/Developer" okta-aws sigsci_prod sts get-caller-identity'
+alias reset-okta='rm -f ~/.aws/credentials ~/.okta/profiles ~/.okta/cookies.properties ~/.okta/.current-session'
+
+alias attack-ali-sigsci="nikto -h https://ali-sigsci.herokuapp.com/"
+alias attack="nikto -h localhost:8085"
+alias suspect='for i in {0..10}; do echo "216.53.193.$i:"; curl --header "X-Forwarded-For: 216.53.193.$i" "http://127.0.0.1:8085/?foo=1+UNION+ALL+SELECT+1"; done'
+alias punch='for i in {0..10}; do echo "192.168.0.$i:"; curl -A "Nikto" --header "X-Forwarded-For: 192.168.0.$i" 127.0.0.1:8085; done'

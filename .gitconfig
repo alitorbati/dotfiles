@@ -1,0 +1,58 @@
+[user]
+	name = Ali Torbati
+	# Commits are associated with a username via email.
+	# This is a global email, but you can set a specific email
+	# within a repo with `git config user.email "email@example.com"`.
+	# More info: https://docs.github.com/en/free-pro-team@latest/github/setting-up-and-managing-your-github-user-account/setting-your-commit-email-address
+	email = ali.torbati@gmail.com
+[branch]
+	autosetuprebase = always
+	autosetupmerge = always # https://stackoverflow.com/a/29928863/2122060
+[pull]
+	rebase = true
+[rebase]
+	autoStash = true
+[push]
+	default = current
+[alias]
+	# test colors: git log --pretty=format:"%Credred%Creset %Cgreengreen%Creset %C(Yellow)yellow%Creset %Cblueblue%Creset %C(magenta)magenta%Creset %C(cyan)cyan%Creset %C(reverse)Reverse%Creset %C(white)white%Creset"
+	st = status
+	di = diff --ignore-space-change -- ":(exclude)*/dist/*"
+	dc = diff --ignore-space-change --cached
+	dw = diff # shows white space changes
+	lg = log --graph --decorate --color --pretty=format:'%Cred%h%Creset %C(bold blue)<%an>%Creset%C(yellow)%d%Creset %Cgreen(%cr)%Creset %s'
+	sl = stash list --pretty=format:'%Cred%gd%Creset - %C(white)%s'
+	sldangling = git log --graph --oneline --decorate $(git fsck --no-reflog | awk '/dangling commit/ {print $3}') # autostashes
+	cf = diff-tree -r --no-commit-id --name-status # append with diff hash to see changed files
+	recap = log --oneline --no-merges --author=ali
+	amend = commit --amend --no-edit
+	unadd = reset
+	olog = log origin/master..HEAD
+	odiff = diff origin/master..HEAD
+[color "branch"]
+	current = green
+	local = yellow
+	remote = red
+[color "diff"]
+	meta = yellow
+	frag = magenta
+	old = red
+	new = green
+	whitespace = red reverse
+[color "status"]
+	added = yellow
+	changed = green
+	untracked = cyan
+[filter "lfs"]
+	clean = git lfs clean %f
+	smudge = git lfs smudge %f
+	required = true
+[core]
+	excludesfile = /Users/ali/.gitignore_global
+	editor = code --wait
+[color]
+	ui = auto
+[commit]
+	template = /Users/ali/.stCommitMsg
+[url "git@github.com:signalsciences"]
+	insteadOf = https://github.com/signalsciences
