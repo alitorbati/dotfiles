@@ -1,5 +1,9 @@
 # dotfiles
 
+## about
+
+the `.*` files are installed as-is, and `macos.sh` installs and configures a bunch of stuff.
+
 ## execute as-is
 
 `cd; curl -#L https://github.com/alitorbati/dotfiles/tarball/main | tar -xzv --strip-components 1 --exclude='README.md'; source macos.sh; rm macos.sh`
