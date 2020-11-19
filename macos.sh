@@ -8,7 +8,7 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
 
 # ==========
-echo -e "\n🍻 brew"
+echo -e "\n🍻 brew (be patient)"
 # ==========
 
 # Homebrew: Update or install brew
@@ -234,19 +234,6 @@ open Snazzy.terminal
 osascript -e 'tell application "Terminal" to set default settings to settings set "Snazzy"'
 rm Snazzy.terminal
 
-# download dotfiles
-CURRENTDIR=`pwd`
-GISTURL="https://gist.githubusercontent.com/alitorbati/a8a903621ad1df6317e424a1a69f5d93/raw"
-# go to where we want them downloaded
-cd ~/
-curl -sL --remote-name "$GISTURL/.zshrc"
-curl -sL --remote-name "$GISTURL/.aliases"
-curl -sL --remote-name "$GISTURL/.gitconfig"
-curl -sL --remote-name "$GISTURL/.hushlogin"
-# curl -sL --remote-name "$GISTURL/.inputrc"
-# go back to where we started
-cd $CURRENTDIR
-
 # Kill System UI for some of these changes to take affect
 killall SystemUIServer
 
@@ -255,7 +242,3 @@ killall SystemUIServer
 # \e[32m means green, \e[0m means reset color
 echo -e "\n✨ \e[32mall done \e[0m✨ please \e[33mrestart\e[0m for good measure\n"
 # ==========
-
-# optionally restart
-read "shouldRestart?Restart now? "
-[[ "$shouldRestart" =~ ^[Yy]$ ]] && echo "Restarting..."; sudo shutdown -r now;

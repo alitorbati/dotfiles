@@ -56,3 +56,5 @@
 	template = /Users/ali/.stCommitMsg
 [url "git@github.com:signalsciences"]
 	insteadOf = https://github.com/signalsciences
+[url "git@github.com:fastly"]
+	insteadof = https://github.com/fastly

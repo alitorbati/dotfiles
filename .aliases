@@ -5,7 +5,7 @@
 # do the whole thing
 # ==========
 
-alias dotfiles="curl -sL https://gist.githubusercontent.com/alitorbati/a8a903621ad1df6317e424a1a69f5d93/raw/macos.sh | zsh"
+alias dotfiles="cd; curl -#L https://github.com/alitorbati/dotfiles/tarball/main | tar -xzv --strip-components 1 --exclude={README.md}; source macos.sh; rm macos.sh"
 
 
 # ==========
