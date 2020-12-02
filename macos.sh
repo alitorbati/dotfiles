@@ -3,7 +3,7 @@ echo -e "🚀 running"
 # Ask for the administrator password up front
 sudo -v
 
-# Keep-alive: update existing `sudo` time stamp until `.macos` has finished
+# Keep-alive: update existing `sudo` time stamp until this script has finished
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
 
@@ -224,8 +224,8 @@ osascript -l JavaScript -e "Application('System Events').appearancePreferences.d
 echo -e "\n🧰 terminal setup"
 # ==========
 
-# use zsh as default shell
-chsh -s $(which zsh)
+# use zsh as default shell if it's not already
+[ "$SHELL" != "/bin/zsh" ] && chsh -s $(which zsh)
 
 # Snazzy theme
 # https://github.com/sindresorhus/terminal-snazzy
