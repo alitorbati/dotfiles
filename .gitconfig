@@ -14,6 +14,9 @@
 	autoStash = true
 [push]
 	default = current
+[stash]
+	showPatch = true
+	showStat = true
 [alias]
 	# test colors: git log --pretty=format:"%Credred%Creset %Cgreengreen%Creset %C(Yellow)yellow%Creset %Cblueblue%Creset %C(magenta)magenta%Creset %C(cyan)cyan%Creset %C(reverse)Reverse%Creset %C(white)white%Creset"
 	st = status
