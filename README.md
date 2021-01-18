@@ -2,7 +2,7 @@
 
 ## about
 
-the `.*` files are destructively downloaded to the root directory. `macos.sh` installs and configures a bunch of stuff, then gets deleted.
+the `.*` files are destructively downloaded to the root directory. they will overwrite existing files. `macos.sh` installs and configures a bunch of stuff, then gets deleted.
 
 ## how to use
 ### execute immediately
@@ -15,4 +15,5 @@ Subsequently use the `dotfiles` alias to execute that line
 
 1. `git clone` blah blah
 1. `cd` into the new dir
+1. change stuff
 1. `source macos.sh`
