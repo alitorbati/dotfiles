@@ -47,7 +47,7 @@ alias hide="defaults write com.apple.finder AppleShowAllFiles -bool false && kil
 alias aliases="code ~/.aliases"
 
 # stop typing `git` so much
-# alias g="git"
+alias g="git"
 
 
 # ==========
