@@ -229,7 +229,7 @@ echo -e "\n🧰 terminal setup"
 
 # Snazzy theme
 # https://github.com/sindresorhus/terminal-snazzy
-curl -sL --remote-name https://github.com/sindresorhus/terminal-snazzy/raw/master/Snazzy.terminal
+curl -sL --remote-name https://github.com/sindresorhus/terminal-snazzy/raw/main/Snazzy.terminal
 open Snazzy.terminal
 osascript -e 'tell application "Terminal" to set default settings to settings set "Snazzy"'
 rm Snazzy.terminal
