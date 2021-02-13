@@ -28,12 +28,13 @@ brew install \
   yarn \
 
 # install useful applications
-brew cask install \
-  docker \
+# brew install --cask \
   # 1password \
   # dropbox \
+  # docker \
   # google-chrome \
   # spotify \
+  # transmission \
   # visual-studio-code \
   # vlc \
 
