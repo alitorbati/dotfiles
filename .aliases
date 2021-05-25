@@ -54,6 +54,7 @@ alias g="git"
 # SigSci
 # ==========
 
+alias signalsciences="cd ${GOPATH}/src/github.com/signalsciences/"
 alias sigsci="cd ${GOPATH}/src/github.com/signalsciences/sigsci/"
 alias v1="cd ${GOPATH}/src/github.com/signalsciences/sigsci/dashboard/ui/v1/"
 alias cacheblaster="rm -rf node_modules/.cache/"
