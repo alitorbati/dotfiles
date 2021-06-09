@@ -16,7 +16,7 @@ brew update || /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Home
 
 # install useful formulae
 brew install \
-  node@12 \
+  node@14 \
   nikto \
   wget \
   git \
