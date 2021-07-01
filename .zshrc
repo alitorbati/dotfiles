@@ -16,7 +16,7 @@ export PATH="$HOME/bin:$PATH"
 # extend `$PATH` some more
 export GOPATH=/Users/ali/go
 export PATH=${GOPATH}/bin:$PATH
-export PATH=/usr/local/opt/node@8/bin:$PATH
+export PATH=/usr/local/opt/node@14/bin:$PATH
 export PATH="$HOME/.okta/bin:$PATH"
 
 # OktaAWSCLI
