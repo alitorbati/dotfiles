@@ -33,10 +33,15 @@ brew install \
   # dropbox \
   # docker \
   # google-chrome \
+  # mullvadvpn \
+  # pika \
+  # plex-media-server \
+  # slack \
   # spotify \
   # transmission \
   # visual-studio-code \
   # vlc \
+  # zoom \
 
 # Remove outdated versions from the cellar
 brew cleanup
