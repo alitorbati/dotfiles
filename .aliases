@@ -5,8 +5,7 @@
 # do the whole thing
 # ==========
 
-alias dotfiles="cd; curl -#L https://github.com/alitorbati/dotfiles/tarball/main | tar -xzv --strip-components 1 --exclude='README.md'; source macos.sh; rm macos.sh; mv convert-to-jpeg.workflow ~/Library/Services/convert-to-jpeg.workflow"
-
+alias dotfiles="cd; curl -#L https://github.com/alitorbati/dotfiles/tarball/main | tar -xzv --strip-components 1 --exclude='README.md'; source macos.sh; rm macos.sh; mv convert-to-jpeg.workflow/ ~/Library/Services/"
 
 # ==========
 # formatting
