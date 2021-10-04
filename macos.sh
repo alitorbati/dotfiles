@@ -225,6 +225,9 @@ defaults write com.apple.menuextra.battery ShowPercent -string "YES"
 # Turn on dark mode
 osascript -l JavaScript -e "Application('System Events').appearancePreferences.darkMode = true"
 
+# Disable user interface sound effects
+defaults write com.apple.systemsound "com.apple.sound.uiaudio.enabled" -int 0
+
 
 # ==========
 echo -e "\n🧰 terminal setup"
