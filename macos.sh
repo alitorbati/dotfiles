@@ -30,12 +30,13 @@ brew install \
 # install useful applications
 # brew install --cask \
   # 1password \
-  # dropbox \
   # docker \
+  # dropbox \
   # google-chrome \
   # mullvadvpn \
   # pika \
   # plex-media-server \
+  # signal \
   # slack \
   # spotify \
   # transmission \
