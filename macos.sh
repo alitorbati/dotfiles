@@ -3,9 +3,6 @@ echo -e "🚀 running"
 # Ask for the administrator password up front
 sudo -v
 
-# Keep-alive: update existing `sudo` time stamp until this script has finished
-# while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
-
 
 # ==========
 echo -e "\n🍻 brew (be patient)"
@@ -14,7 +11,7 @@ echo -e "\n🍻 brew (be patient)"
 # Homebrew: Update or install brew
 brew update || /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 
-# install useful formulae
+# Install useful formulae
 brew install \
   node@14 \
   nikto \
@@ -27,7 +24,7 @@ brew install \
   openjdk \
   yarn \
 
-# install useful applications
+# Install useful applications
 # brew install --cask \
   # 1password \
   # docker \
@@ -239,6 +236,7 @@ echo -e "\n🧰 terminal setup"
 
 # Snazzy theme
 # https://github.com/sindresorhus/terminal-snazzy
+# TODO: change this to iterm2 version
 curl -sL --remote-name https://github.com/sindresorhus/terminal-snazzy/raw/main/Snazzy.terminal
 open Snazzy.terminal
 osascript -e 'tell application "Terminal" to set default settings to settings set "Snazzy"'

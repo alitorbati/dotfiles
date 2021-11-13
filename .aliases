@@ -2,13 +2,13 @@
 
 
 # ==========
-# do the whole thing
+# Do the whole thing
 # ==========
 
 alias dotfiles="cd; curl -#L https://github.com/alitorbati/dotfiles/tarball/main | tar -xzv --strip-components 1 --exclude='README.md'; source macos.sh; rm macos.sh"
 
 # ==========
-# formatting
+# Formatting
 # ==========
 
 # List -(all files)(separate lines)(colorized)(extra info)
@@ -22,7 +22,7 @@ alias egrep='egrep --color=auto'
 
 
 # ==========
-# terminal conveniences
+# Terminal conveniences
 # ==========
 
 # Enable aliases to be sudo’ed
@@ -34,7 +34,7 @@ alias reload="exec $SHELL -l"
 # Lock the screen (when going AFK)
 alias afk="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend"
 
-# show IP addresses
+# Show IP addresses
 alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
 alias localip="ipconfig getifaddr en0"
 
@@ -42,10 +42,10 @@ alias localip="ipconfig getifaddr en0"
 alias show="defaults write com.apple.finder AppleShowAllFiles -bool true && killall Finder"
 alias hide="defaults write com.apple.finder AppleShowAllFiles -bool false && killall Finder"
 
-# open this file in an editor
+# Open this file in an editor
 alias aliases="code ~/.aliases"
 
-# stop typing `git` so much
+# Stop typing `git` so much
 alias g="git"
 
 

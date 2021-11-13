@@ -2,7 +2,7 @@
 
 
 # ==========
-# extend `$PATH`
+# Extend `$PATH`
 # ==========
 
 # Add `~/bin` to the `$PATH`
@@ -31,8 +31,6 @@ export PATH="$HOME/.okta/bin:$PATH"
 # Load the shell dotfiles, and then some:
 [ -f ~/.aliases ] && source ~/.aliases
 
-# run `brew install bash-completion` for this to work
-# [ -f /usr/local/etc/bash_completion ] && . /usr/local/etc/bash_completion
 
 # ==========
 # Prompt
@@ -51,11 +49,34 @@ PROMPT='%B%F{blue}%1~%b%f${vcs_info_msg_0_} %F{magenta}→ %f'
 
 
 # ==========
-# brew autocompletion
+# Autocompletion
 # ==========
 
+# brew autocompletion
 if type brew &>/dev/null; then
   FPATH=$(brew --prefix)/share/zsh/site-functions:$FPATH
   autoload -Uz compinit
   compinit
 fi
+
+# Case-insensitive autocompletion
+# https://stackoverflow.com/a/24237590/2122060
+zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}' 'r:|[._-]=* r:|=*' 'l:|=* r:|=*'
+
+
+# ==========
+# History
+# ==========
+
+# take currently typed string into account when iterating through history
+bindkey "\e[A" history-beginning-search-backward
+bindkey "\e[B" history-beginning-search-forward
+
+# all tabs write to same history
+setopt INC_APPEND_HISTORY
+
+# Up/down arrows ignore duplicate entries
+setopt HIST_FIND_NO_DUPS
+
+# Consecutive duplicates are not added to history
+setopt HIST_IGNORE_DUPS
