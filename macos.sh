@@ -30,6 +30,8 @@ brew install \
   # docker \
   # dropbox \
   # google-chrome \
+  # hand-mirror \
+  # iterm2 \
   # mullvadvpn \
   # pika \
   # plex-media-server \
