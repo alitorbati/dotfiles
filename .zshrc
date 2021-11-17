@@ -69,8 +69,8 @@ zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}' 'r:|[._-]=* r:|=*' 
 # ==========
 
 # take currently typed string into account when iterating through history
-bindkey "\e[A" history-beginning-search-backward
-bindkey "\e[B" history-beginning-search-forward
+bindkey "\e[A" history-search-backward
+bindkey "\e[B" history-search-forward
 
 # all tabs write to same history
 setopt INC_APPEND_HISTORY
