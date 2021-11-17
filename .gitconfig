@@ -24,7 +24,7 @@
 	dc = diff --ignore-space-change --color-moved --cached
 	lg = log --graph --decorate --color --pretty=format:'%Cred%h%Creset %C(bold blue)<%an>%Creset%C(yellow)%d%Creset %Cgreen(%cr)%Creset %s'
 	sl = stash list --pretty=format:'%Cred%gd%Creset - %C(white)%s'
-	sldangling = git log --graph --oneline --decorate $(git fsck --no-reflog | awk '/dangling commit/ {print $3}') # autostashes
+	sldangling = log --graph --oneline --decorate $(git fsck --no-reflog | awk '/dangling commit/ {print $3}') # autostashes
 	cf = diff-tree -r --no-commit-id --name-status # append with diff hash to see changed files
 	recap = log --oneline --no-merges --author=ali
 	amend = commit --amend --no-edit
