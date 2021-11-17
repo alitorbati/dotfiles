@@ -11,9 +11,9 @@ the `.*` files are destructively downloaded to the root directory. they will ove
 
 Subsequently use the `dotfiles` alias to execute that line
 
-### or download, modify, and run
+### or download, modify, and execute
 
 1. `git clone` blah blah
 1. `cd` into the new dir
-1. change stuff
-1. `source macos.sh`
+1. modify stuff
+1. run `source macos.sh` to execute
