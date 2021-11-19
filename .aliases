@@ -57,7 +57,7 @@ alias signalsciences="cd ${GOPATH}/src/github.com/signalsciences/"
 alias cosmo="cd ${GOPATH}/src/github.com/signalsciences/cosmo/"
 alias sigsci="cd ${GOPATH}/src/github.com/signalsciences/sigsci/"
 alias v1="sigsci; cd dashboard/ui/v1/"
-alias cacheblaster="rm -rf node_modules/.cache/"
+alias cacheblaster="v1; rm -rf node_modules/.cache/"
 alias dtg="git diff -U5|gist -p -c -f changes.diff -s -o"
 
 alias ecr_auth='aws --profile sigsci_prod --region us-west-2 ecr get-login-password | docker login --password-stdin --username AWS https://\`aws --profile sigsci_prod sts get-caller-identity|jq -r .Account\`.dkr.ecr.us-west-2.amazonaws.com'
