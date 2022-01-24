@@ -33,6 +33,7 @@ brew install \
   # hand-mirror \
   # iterm2 \
   # mullvadvpn \
+  # numi \
   # pika \
   # plex-media-server \
   # signal \
