@@ -54,14 +54,9 @@ alias g="git"
 # ==========
 
 alias signalsciences="cd ${GOPATH}/src/github.com/signalsciences/"
-alias cosmo="cd ${GOPATH}/src/github.com/signalsciences/cosmo/"
-alias sigsci="cd ${GOPATH}/src/github.com/signalsciences/sigsci/"
+alias cosmo="signalsciences; cd cosmo/"
+alias sigsci="signalsciences; cd sigsci/"
 alias v1="sigsci; cd dashboard/ui/v1/"
-alias dtg="git diff -U5|gist -p -c -f changes.diff -s -o"
-
-alias ecr_auth='aws --profile sigsci_prod --region us-west-2 ecr get-login-password | docker login --password-stdin --username AWS https://\`aws --profile sigsci_prod sts get-caller-identity|jq -r .Account\`.dkr.ecr.us-west-2.amazonaws.com'
-alias reset-okta='rm -f ~/.aws/credentials ~/.okta/profiles ~/.okta/cookies.properties ~/.okta/.current-session'
-alias sigsci-aws='gimme-aws-creds --profile sigsci_prod'
 
 alias attack-ali-sigsci="nikto -h https://ali-sigsci.herokuapp.com/"
 alias attack="nikto -h localhost:8085"
