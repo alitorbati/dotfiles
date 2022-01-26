@@ -20,7 +20,7 @@
 [alias]
 	# test colors: git log --pretty=format:"%Credred%Creset %Cgreengreen%Creset %C(Yellow)yellow%Creset %Cblueblue%Creset %C(magenta)magenta%Creset %C(cyan)cyan%Creset %C(reverse)Reverse%Creset %C(white)white%Creset"
 	st = status
-	di = diff --ignore-space-change --color-moved -- ":(exclude)*/dist/*"
+	di = diff --ignore-space-change --color-moved -- ":(exclude)*/dist/*" ":(exclude)*.min.js" ":(exclude)*.min.css"
 	dc = diff --ignore-space-change --color-moved --cached
 	lg = log --graph --decorate --color --pretty=format:'%Cred%h%Creset %C(bold blue)<%an>%Creset%C(yellow)%d%Creset %Cgreen(%cr)%Creset %s'
 	sl = stash list --pretty=format:'%Cred%gd%Creset - %C(white)%s'
