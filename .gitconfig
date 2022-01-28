@@ -50,7 +50,7 @@
 	smudge = git lfs smudge %f
 	required = true
 [core]
-	excludesfile = /Users/ali/.gitignore_global
+	excludesfile = ~/.gitignore_global
 	editor = code --wait
 [color]
 	ui = auto
