@@ -239,11 +239,16 @@ echo -e "\n🧰 terminal setup"
 
 # Snazzy theme
 # https://github.com/sindresorhus/terminal-snazzy
-# TODO: change this to iterm2 version
-curl -sL --remote-name https://github.com/sindresorhus/terminal-snazzy/raw/main/Snazzy.terminal
-open Snazzy.terminal
-osascript -e 'tell application "Terminal" to set default settings to settings set "Snazzy"'
-rm Snazzy.terminal
+# curl -sL --remote-name https://github.com/sindresorhus/terminal-snazzy/raw/main/Snazzy.terminal
+# open Snazzy.terminal
+# osascript -e 'tell application "Terminal" to set default settings to settings set "Snazzy"'
+# rm Snazzy.terminal
+
+# Custom iTerm2 preferences are already in the root directory and include Snazzy theme
+# Specify the preferences directory
+defaults write com.googlecode.iterm2.plist PrefsCustomFolder -string "~"
+# Tell iTerm2 to use the custom preferences in the directory
+defaults write com.googlecode.iterm2.plist LoadPrefsFromCustomFolder -bool true
 
 # Kill System UI for some of these changes to take affect
 killall SystemUIServer
