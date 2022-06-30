@@ -31,6 +31,7 @@
 	unadd = reset
 	olog = log origin/master..HEAD
 	odiff = diff origin/master..HEAD
+	rebase-main = pull --rebase origin main
 [color "branch"]
 	current = green
 	local = yellow
