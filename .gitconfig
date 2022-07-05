@@ -26,7 +26,7 @@
 	sl = stash list --pretty=format:'%Cred%gd%Creset - %C(white)%s'
 	sldangling = log --graph --oneline --decorate $(git fsck --no-reflog | awk '/dangling commit/ {print $3}') # autostashes
 	cf = diff-tree -r --no-commit-id --name-status # append with diff hash to see changed files
-	recap = log --oneline --no-merges --author=ali
+	recap = !git lg --author="$(git config --get user.email)" # prepend "!" to run external commands
 	amend = commit --amend --no-edit
 	unadd = reset
 	olog = log origin/master..HEAD
