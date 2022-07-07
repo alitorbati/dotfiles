@@ -10,7 +10,7 @@ export PATH="$HOME/bin:$PATH"
 
 
 # ==========
-# SigSci stuff
+# SigSci env
 # ==========
 
 # extend `$PATH` some more
@@ -23,6 +23,13 @@ export PATH="$HOME/.okta/bin:$PATH"
 # copy the .okta/ dir from old env for this to work
 [ -f ~/.okta/bash_functions ] && . ~/.okta/bash_functions
 
+
+# ==========
+# Additional env vars
+# ==========
+
+# optionally use .env for variables that shouldn't be committed
+[ -f ~/.env ] && source ~/.env
 
 # ==========
 # Dotfiles
