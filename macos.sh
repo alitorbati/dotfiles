@@ -39,6 +39,7 @@ brew install \
   # signal \
   # slack \
   # spotify \
+  # the-unarchiver \
   # transmission \
   # visual-studio-code \
   # vlc \
