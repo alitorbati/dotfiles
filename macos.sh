@@ -191,6 +191,12 @@ defaults write com.apple.dock autohide -bool true
 # Don’t show recent applications in Dock
 defaults write com.apple.dock show-recents -bool false
 
+# Set hover-to-show delay to 0
+defaults write com.apple.dock "autohide-delay" -int 0
+
+# Speed up dock-show animation
+defaults write com.apple.dock "autohide-time-modifier" -float 0.4
+
 # Hot corners
 # Possible values:
 #  0: no-op
