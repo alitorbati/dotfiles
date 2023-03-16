@@ -12,17 +12,17 @@ echo -e "\n🍻 brew (be patient)"
 brew update || /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 
 # Install useful formulae
-brew install \
-  node@14 \
-  nikto \
-  wget \
-  git \
-  go \
-  awscli \
-  jq \
-  phantomjs \
-  openjdk \
-  yarn \
+# brew install \
+  # node@14 \
+  # nikto \
+  # wget \
+  # git \
+  # go \
+  # awscli \
+  # jq \
+  # phantomjs \
+  # openjdk \
+  # yarn \
 
 # Install useful applications
 # brew install --cask \
