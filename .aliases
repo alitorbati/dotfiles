@@ -47,19 +47,3 @@ alias aliases="code ~/.aliases"
 
 # Stop typing `git` so much
 alias g="git"
-
-
-# ==========
-# SigSci
-# ==========
-
-alias signalsciences="cd ${GOPATH}/src/github.com/signalsciences/"
-alias cosmo="signalsciences; cd cosmo/"
-alias sigsci="signalsciences; cd sigsci/"
-alias v1="sigsci; cd dashboard/ui/v1/"
-
-alias attack-ali-sigsci="nikto -h https://ali-sigsci.herokuapp.com/"
-alias attack="nikto -h localhost:8085"
-alias suspect='for i in {0..10}; do echo "216.53.193.$i:"; curl --header "X-Forwarded-For: 216.53.193.$i" "http://127.0.0.1:8085/?foo=1+UNION+ALL+SELECT+1"; done'
-alias punch='for i in {0..10}; do echo "192.168.0.$i:"; curl -A "Nikto" --header "X-Forwarded-For: 192.168.0.$i" 127.0.0.1:8085; done'
-alias splat='sigsci; make splatter; attack; suspect; punch;'
