@@ -164,7 +164,7 @@ defaults write com.apple.desktopservices DSDontWriteUSBStores -bool true
 # List View   : `Nlsv`
 # Column View : `clmv`
 # Cover Flow  : `Flwv`
-defaults write com.apple.finder FXPreferredViewStyle -string "clmv"
+defaults write com.apple.Finder FXPreferredViewStyle clmv
 
 # Finder window default folder path
 # Computer     : `PfCm`
