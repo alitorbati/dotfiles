@@ -1,5 +1,11 @@
 #!/bin/zsh
 
+# ==========
+# Load others if present
+# ==========
+
+[[ -s "$HOME/.zshrc.local" ]] && source "$HOME/.zshrc.local"
+
 
 # ==========
 # Extend `$PATH`
