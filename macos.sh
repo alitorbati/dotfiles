@@ -176,6 +176,9 @@ defaults write com.apple.Finder FXPreferredViewStyle clmv
 # Other…       : `PfLo`
 defaults write com.apple.finder NewWindowTarget -string 'PfHm'
 
+# Hide external disks on the desktop
+defaults write com.apple.finder "ShowExternalHardDrivesOnDesktop" -bool false
+
 # Disable the warning before emptying the Trash
 defaults write com.apple.finder WarnOnEmptyTrash -bool false
 
