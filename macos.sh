@@ -131,11 +131,6 @@ defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false
 defaults write NSGlobalDomain KeyRepeat -int 1
 defaults write NSGlobalDomain InitialKeyRepeat -int 15
 
-# Set touchbar to classic controls
-defaults write com.apple.touchbar.agent PresentationModeGlobal fullControlStrip
-# may trigger warning: "No matching processes belonging to you were found"
-pkill "Touch Bar agent"; killall "ControlStrip";
-
 # Disable the warning when changing a file extension
 defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
 
