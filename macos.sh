@@ -252,7 +252,7 @@ echo -e "\n🧰 terminal setup"
 # Custom iTerm2 preferences are already in the root directory and include Snazzy theme
 # http://stratus3d.com/blog/2015/02/28/sync-iterm2-profile-with-dotfiles-repository/
 # Specify the preferences directory
-defaults write com.googlecode.iterm2.plist PrefsCustomFolder -string "https://raw.githubusercontent.com/alitorbati/dotfiles/main/com.googlecode.iterm2.plist"
+defaults write com.googlecode.iterm2.plist PrefsCustomFolder -string "https://raw.githubusercontent.com/alitorbati/dotfiles/main/iterm2.plist"
 # Tell iTerm2 to use the custom preferences in the directory
 defaults write com.googlecode.iterm2.plist LoadPrefsFromCustomFolder -bool true
 
