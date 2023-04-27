@@ -8,7 +8,7 @@ the `.*` files are destructively downloaded to the root directory. they will ove
 
 ### option 1: execute immediately
 
-`cd; curl -#L https://github.com/alitorbati/dotfiles/tarball/main | tar -xzv --strip-components 1 --exclude={'README.md', 'install.sh', 'com.googlecode.iterm2.plist'}; source macos.sh; rm macos.sh;`
+`cd; curl -#L https://github.com/alitorbati/dotfiles/tarball/main | tar -xzv --strip-components 1 --exclude={'README.md','install.sh','com.googlecode.iterm2.plist'}; source macos.sh; rm macos.sh;`
 
 Subsequently use the `dotfiles` alias to execute that command.
 

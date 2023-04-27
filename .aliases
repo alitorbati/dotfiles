@@ -5,7 +5,7 @@
 # Do the whole thing
 # ==========
 
-alias dotfiles="cd; curl -#L https://github.com/alitorbati/dotfiles/tarball/main | tar -xzv --strip-components 1 --exclude={'README.md', 'install.sh', 'com.googlecode.iterm2.plist'}; source macos.sh; rm macos.sh;"
+alias dotfiles="cd; curl -#L https://github.com/alitorbati/dotfiles/tarball/main | tar -xzv --strip-components 1 --exclude={'README.md','install.sh','com.googlecode.iterm2.plist'}; source macos.sh; rm macos.sh;"
 
 
 # ==========
