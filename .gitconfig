@@ -32,6 +32,7 @@
 	olog = log origin/master..HEAD
 	odiff = diff origin/master..HEAD
 	rebase-main = pull --rebase origin main
+	done = "!f() { git checkout main && git pull && git branch -d @{-1}; }; f"
 [color "branch"]
 	current = green
 	local = yellow
