@@ -45,6 +45,10 @@ brew update || /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Home
   # vlc \
   # zoom \
 
+# Install coding font
+# brew tap homebrew/cask-fonts
+# brew install font-monaspace
+
 # Remove outdated versions from the cellar
 brew cleanup
 
