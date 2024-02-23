@@ -71,11 +71,11 @@ zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}' 'r:|[._-]=* r:|=*' 
 # bindkey "\e[A" history-search-backward
 # bindkey "\e[B" history-search-forward
 
-# # all tabs write to same history
-# setopt INC_APPEND_HISTORY
+# all tabs write to same history
+setopt SHARE_HISTORY
 
-# # Up/down arrows ignore duplicate entries
-# setopt HIST_FIND_NO_DUPS
+# Up/down arrows ignore duplicate entries
+setopt HIST_FIND_NO_DUPS
 
-# # Consecutive duplicates are not added to history
-# setopt HIST_IGNORE_DUPS
+# Consecutive duplicates are not added to history
+setopt HIST_IGNORE_DUPS
