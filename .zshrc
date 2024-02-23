@@ -1,13 +1,6 @@
 #!/bin/zsh
 
 # ==========
-# Load others if present
-# ==========
-
-[[ -s "$HOME/.zshrc.local" ]] && source "$HOME/.zshrc.local"
-
-
-# ==========
 # Extend `$PATH`
 # ==========
 
@@ -79,3 +72,10 @@ setopt HIST_FIND_NO_DUPS
 
 # Consecutive duplicates are not added to history
 setopt HIST_IGNORE_DUPS
+
+
+# ==========
+# Load others if present
+# ==========
+
+[[ -s "$HOME/.zshrc.local" ]] && source "$HOME/.zshrc.local"
