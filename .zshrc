@@ -79,3 +79,4 @@ setopt HIST_IGNORE_DUPS
 # ==========
 
 [[ -s "$HOME/.zshrc.local" ]] && source "$HOME/.zshrc.local"
+[[ -s "$HOME/.bashrc.local" ]] && source "$HOME/.bashrc.local"
