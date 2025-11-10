@@ -60,18 +60,28 @@ zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}' 'r:|[._-]=* r:|=*' 
 # History
 # ==========
 
-# # take currently typed string into account when iterating through history
-# bindkey "\e[A" history-search-backward
-# bindkey "\e[B" history-search-forward
+# History size
+HISTSIZE=50000
+SAVEHIST=50000
+
+# take currently typed string into account when iterating through history
+bindkey "^[[A" history-search-backward
+bindkey "^[[B" history-search-forward
 
 # all tabs write to same history
-setopt SHARE_HISTORY
+setopt sharehistory
 
 # Up/down arrows ignore duplicate entries
-setopt HIST_FIND_NO_DUPS
+setopt histfindnodups
 
 # Consecutive duplicates are not added to history
-setopt HIST_IGNORE_DUPS
+setopt histignoredups
+
+# Append to the history file, don't overwrite it
+setopt appendhistory
+
+# Immediately add commands to the history file
+setopt incappendhistory
 
 
 # ==========
