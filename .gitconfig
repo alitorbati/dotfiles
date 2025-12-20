@@ -20,7 +20,7 @@
 	showStat = true
 [alias]
 	# test colors: git log --pretty=format:"%Credred%Creset %Cgreengreen%Creset %C(Yellow)yellow%Creset %Cblueblue%Creset %C(magenta)magenta%Creset %C(cyan)cyan%Creset %C(reverse)Reverse%Creset %C(white)white%Creset"
-	st = status
+	st = status -s
 	di = diff --ignore-space-change --color-moved -- ":(exclude)*/dist/*" ":(exclude)*.min.js" ":(exclude)*.min.css"
 	dc = diff --ignore-space-change --color-moved --cached
 	lg = log --graph --decorate --color --pretty=format:'%Cred%h%Creset %C(bold blue)<%an>%Creset%C(yellow)%d%Creset %Cgreen(%cr)%Creset %s'
@@ -34,6 +34,7 @@
 	odiff = diff origin/master..HEAD
 	rebase-main = pull --rebase origin main
 	done = "!f() { git checkout main && git pull && git branch -d @{-1}; }; f"
+	staash = stash --all
 [color "branch"]
 	current = green
 	local = yellow
@@ -58,8 +59,16 @@
 [color]
 	ui = auto
 [diff]
+  algorithm = histogram
 	colorMoved = default
 [init]
 	defaultBranch = main
 [include]
 	path = ~/.gitconfig.local
+[fetch]
+	prune = true
+[help]
+	autocorrect = prompt
+[rerere]
+	enabled = true # helps with merge conflicts by remembering how you resolved them
+	autoupdate = true
