@@ -7,7 +7,7 @@
 	email = ali.torbati@gmail.com
 [branch]
 	autosetuprebase = always
-	autosetupmerge = always # https://stackoverflow.com/a/29928863/2122060
+	autosetupmerge = true
 [pull]
 	rebase = true
 [rebase]
