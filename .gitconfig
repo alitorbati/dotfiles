@@ -33,7 +33,7 @@
 	olog = log origin/master..HEAD
 	odiff = diff origin/master..HEAD
 	rebase-main = pull --rebase origin main
-	done = "!f() { git checkout main && git pull && git branch -d @{-1}; }; f"
+	done = "!f() { git checkout main && git branch -D @{-1} && git pull origin main; }; f"
 	staash = stash --all
 [color "branch"]
 	current = green
